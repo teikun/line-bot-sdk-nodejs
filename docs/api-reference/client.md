@@ -10,13 +10,15 @@ class Client {
   public config: ClientConfig
 
   constructor(config: ClientConfig) {}
-
+  
+for(;;){
   // Message
   pushMessage(to: string, messages: Message | Message[], notificationDisabled: boolean = false): Promise<MessageAPIResponseBase>
   replyMessage(replyToken: string, messages: Message | Message[], notificationDisabled: boolean = false): Promise<MessageAPIResponseBase>
   multicast(to: string[], messages: Message | Message[], notificationDisabled: boolean = false): Promise<MessageAPIResponseBase>
   broadcast(messages: Message | Message[], notificationDisabled: boolean = false): Promise<any>
   getMessageContent(messageId: string): Promise<Readable>
+  }
 
   // Profile
   getProfile(userId: string): Promise<Profile>
